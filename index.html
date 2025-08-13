@@ -60,7 +60,6 @@
     /* Content area */
     .content {
         flex: 1;
-        padding: 20px;
         overflow-y: auto;
     }
 
@@ -114,37 +113,19 @@
 
 <div class="container">
     <div class="tabs">
-        <div class="tab active" onclick="loadContent('about.html', this)">About Me</div>
-        <div class="tab" onclick="loadContent('links.html', this)">Links</div>
-        <div class="tab" onclick="loadContent('gay.html', this)">Gay</div>
+        <div class="tab active" onclick="loadPage('intro.html', this)">Intro</div>
+        <div class="tab" onclick="loadPage('links.html', this)">Links</div>
     </div>
-    <div class="content" id="content">
-        <!-- Default content will load here -->
-    </div>
+    <iframe title="hi :3" class="content" id="contentFrame" src="intro.html" style="border:none;"></iframe>
+
 </div>
 
 <script>
-    function loadContent(file, tabElement) {
-        fetch(file)
-            .then(response => {
-                if (!response.ok) throw new Error("File not found: " + file);
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('content').innerHTML = data;
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                tabElement.classList.add('active');
-            })
-            .catch(err => {
-                document.getElementById('content').innerHTML = `<p style="color:red;">Error loading ${file}</p>`;
-                console.error(err);
-            });
+    function loadPage(file, tabElement) {
+        document.getElementById('contentFrame').src = file;
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tabElement.classList.add('active');
     }
-
-    // Load default "About Me" on page load
-    window.addEventListener('DOMContentLoaded', () => {
-        loadContent('about.html', document.querySelector('.tab.active'));
-    });
 </script>
 
 </body>
