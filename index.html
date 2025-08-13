@@ -1,146 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>haiii :333</title>
-        <link rel="icon" href="/icon.ico">
-        <style>
-            a {
-            color: white;
-            text-decoration: none;
-            outline: none;
-            }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>haiii :333</title>
+<link rel="icon" href="/icon.ico">
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #63636e;
+        min-height: 100vh;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        line-height: 1.5;
+    }
 
-            a:visited {
-                color: white;
-            }
+    .container {
+        display: flex;
+        background: #1f1e29;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 1000px;
+        width: 90%;
+        max-height: 600px;
+        height: 60%;
+        min-height: 160px;
+    }
 
-            a:hover,
-            a:active,
-            a:focus {
-                color: white;
-                outline: none;
-            }
-            body {
-                margin: 0;
-                font-family: sans-serif;
-                background: #63636e;
-                min-height: 100vh;
-                color: #ffffff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                line-height: 1.5;
-            }
+    /* Tabs sidebar (desktop) */
+    .tabs {
+        background: #220c38;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        min-width: 150px;
+    }
 
-            .container {
-                display: flex;
-                background: #1f1e29;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                border-radius: 8px;
-                overflow: hidden;
-                max-width: 1000px;
-                width: 90%;
-                max-height: 600px;
-                height: 60%;
-                min-height: 160px;
-            }
+    .tab {
+        padding: 15px;
+        cursor: pointer;
+        border-bottom: 1px solid #8142c9;
+        text-align: center;
+    }
 
-            /* Tabs sidebar (desktop) */
-            .tabs {
-                background: #220c38;
-                color: #ffffff;
-                display: flex;
-                flex-direction: column;
-                min-width: 150px;
-            }
+    .tab:hover {
+        background: #ba7af9;
+    }
 
-            .tab {
-                padding: 15px;
-                cursor: pointer;
-                border-bottom: 1px solid #8142c9;
-                text-align: center;
-            }
+    .tab.active {
+        background: #ba7af9;
+    }
 
-            .tab:hover {
-                background: #ba7af9;
-            }
 
-            .tab.active {
-                background: #ba7af9;
-            }
+    /* Content area */
+    .content {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
 
-            /* Content area */
-            .content {
-                flex: 1;
-                padding: 20px;
-                overflow-y: auto;
-            }
+    /* Link styling */
+    a {
+        color: white;
+        text-decoration: none;
+        outline: none;
+    }
+    a:visited {
+        color: white;
+    }
+    a:hover,
+    a:active,
+    a:focus {
+        color: white;
+        outline: none;
+    }
 
-            /* Mobile layout: tabs on top */
-            @media (max-width: 768px) {
-                body {
-                    align-items: stretch;
-                    height: auto;
-                }
-                .container {
-                    flex-direction: column;
-                    height: auto;
-                    border-radius: 0;
-                    max-width: 100%;
-                    width: 100%;
-                    box-shadow: none;
-                    max-height: 100%;
-                }
-                .tabs {
-                    flex-direction: row;
-                    min-width: 0;
-                }
-                .tab {
-                    flex: 1;
-                    border-bottom: none;
-                    border-right: 1px solid #8142c9;
-                }
-                .tab:last-child {
-                    border-right: none;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="tabs">
-                <div class="tab" onclick="showContent('about')">About Me</div>
-                <div class="tab" onclick="showContent('links')">Links</div>
-                <div class="tab" onclick="showContent('gay')">The Gay</div>
-            </div>
-            <div class="content" id="content">
-                <h3>haiiii!!!</h3>
-                <p>This site is still being worked on, hence why it sucks ass.</p>
-                <p>Click one of the tabs to the left or up above to stalk me :3</p>
-            </div>
-        </div>
+    /* Mobile layout: tabs on top */
+    @media (max-width: 768px) {
+        body {
+            align-items: stretch;
+            height: auto;
+        }
+        .container {
+            flex-direction: column;
+            height: auto;
+            border-radius: 0;
+            max-width: 100%;
+            width: 100%;
+            box-shadow: none;
+            max-height: 100%;
+        }
+        .tabs {
+            flex-direction: row;
+            min-width: 0;
+        }
+        .tab {
+            flex: 1;
+            border-bottom: none;
+            border-right: 1px solid #8142c9;
+        }
+        .tab:last-child {
+            border-right: none;
+        }
+    }
+</style>
+</head>
+<body>
 
-        <script>
-            const contents = {
-                about: `<h2>About Me</h2>
-                    <p>About Me :3.</p>`,
-                links: `<h2>Links</h2>
-                    <h4><a href="https://www.tumblr.com/blog/nuvaa"><img id="tumblrIcon" alt="tumblr" src="tumblr.svg" height="13" width="13"/> Tumblr</a><br>
-                    <a href="https://www.youtube.com/@nuva9547"><img id="youtubeIcon" alt="youtube" src="youtube.svg" height="13" width="13"/> Youtube</a><br>
-                    <a href="discordapp.com/users/410550923086266370"><img id="discordIcon" alt="discord" src="discord.svg" height="13" width="13"/> Discord</a><br>
-                    <a href="https://steamcommunity.com/id/Nuwuva/"><img id="steamIcon" alt="steam" src="steam.svg" height="13" width="13"/> Steam</a></h4>`,
-                gay: `<h2>Gay</h2>
-                    <p>Gay. Gay. Homosexual. Gay.</p>`
-            };
+<div class="container">
+    <div class="tabs">
+        <div class="tab active" onclick="loadContent('about.html', this)">About Me</div>
+        <div class="tab" onclick="loadContent('links.html', this)">Links</div>
+        <div class="tab" onclick="loadContent('gay.html', this)">Gay</div>
+    </div>
+    <div class="content" id="content">
+        <!-- Default content will load here -->
+    </div>
+</div>
 
-            function showContent(tab) {
-                document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
-                event.target.classList.add("active");
-                document.getElementById("content").innerHTML = contents[tab];
-            }
-        </script>
-    </body>
+<script>
+    function loadContent(file, tabElement) {
+        fetch(file)
+            .then(response => {
+                if (!response.ok) throw new Error("File not found: " + file);
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('content').innerHTML = data;
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tabElement.classList.add('active');
+            })
+            .catch(err => {
+                document.getElementById('content').innerHTML = `<p style="color:red;">Error loading ${file}</p>`;
+                console.error(err);
+            });
+    }
+
+    // Load default "About Me" on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        loadContent('about.html', document.querySelector('.tab.active'));
+    });
+</script>
+
+</body>
 </html>
