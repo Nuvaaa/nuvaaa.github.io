@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>why are you here? :33</title>
+        <meta charset="UTF-8" />
+        <style>
+            @font-face {
+                font-family: "PixelFont";
+                src: url("Tiny5-Regular.woff") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                outline: none;
+            }
+            body {
+                font-family: "Pixelfont", monospace;
+                -webkit-font-smoothing: none;
+                -moz-osx-font-smoothing: grayscale;
+                font-smooth: never;
+                text-rendering: optimizeSpeed;
+                background: #1f1e29;
+                color: #ffffff;
+                text-align: center;
+                line-height: 1.5;
+            }
+            .sidebox {
+                width: 100%;
+                background-color: #323142;
+                padding: 1px;
+            }
+            p {
+                margin: 20px;
+            }
+            .tile-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+                justify-items: center;
+                padding: 20px;
+                padding-top: 0;
+            }
+            .tile {
+                background: #1f1e29;
+                color: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
+                max-width: 350px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+            }
+            .tile-media img,
+            .tile-media video {
+                max-width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+            .tile-caption {
+                font-size: 1em;
+                margin: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Interests / Likes</h2>
+
+        <p>
+            <b style="font-size: 20px">General</b>: Art / Creation, Video Games, Moral Piracy, Retro System Modding,
+            Engineering, Programming
+        </p>
+        <div class="sidebox">
+            <p>
+                <b style="font-size: 20px">Video Games</b>: Hollow Knight, Celeste, Minecraft, Terraria, Rythm Games,
+                Deltarune, In Stars And Time, Omori, Undertale, Oneshot, Outer Wilds, Balatro
+            </p>
+        </div>
+        <p><b style="font-size: 20px">Animals</b>: Cats, Ferrets, Rats, Goats, Foxes, Racoons, Dogs,</p>
+        <div class="sidebox">
+            <p><b style="font-size: 20px">Achievements</b>:</p>
+            <div class="tile-grid">
+                <div class="tile">
+                    <p><b style="font-size: 20px">Absolute Radiance No Hit</b></p>
+                    <div class="tile-media">
+                        <iframe
+                            width="320"
+                            height="180"
+                            src="https://www.youtube.com/embed/wUO0K-aYYX8?si=J2SC-R8RG4aMZsgT"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p class="tile-caption">This took me about 5 hours and MANY attempts<br>I didn't count :3</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -39,30 +39,26 @@
                 margin-left: auto;
                 margin-right: auto;
                 border-collapse: separate;
-                border-spacing: 4px; 
+                border-spacing: 4px;
             }
             td {
                 border: 2px solid;
                 padding: 2px;
                 width: 150px;
             }
-            .image-grid-container {
-                display: flex;
-                justify-content: center;
+            .sidebox {
+                width: 100%;
+                background-color: #323142;
+                padding-bottom: 20px;
+                padding-top: 20px;
             }
-            .image-grid {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 4px;
-                justify-content: center;
+            p {
+                margin: 20px;
             }
-            .image-grid a {
-                display: block;
-            }
-            .image-grid img {
-                width: 168px;
-                height: auto;
-                display: block;
+            strong {
+                display: inline-block;
+                font-size: 20px;
+                margin-top: -25px;
             }
         </style>
     </head>
@@ -81,36 +77,37 @@
                 <tr></tr>
                 <tr>
                     <td>Nuva</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
+                    <td><img src="Glyph2.png" alt="" /> Yes</td>
                 </tr>
                 <tr>
                     <td>Anything Else</td>
-                    <td><img src="Glyph1.png" alt=""> Prefer not</td>
+                    <td><img src="Glyph1.png" alt="" /> Prefer not</td>
                 </tr>
             </tbody>
         </table>
 
         <br />
 
-        <strong style="font-size: 20px">Pronouns</strong>
-        <table>
-            <tbody>
-                <tr></tr>
-                <tr>
-                    <td>They/Them</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
-                </tr>
-                <tr>
-                    <td>She/Her</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
-                </tr>
-                <tr>
-                    <td>He/Him</td>
-                    <td><img src="Glyph1.png" alt=""> Never</td>
-                </tr>
-            </tbody>
-        </table>
-
+        <div class="sidebox">
+            <strong style="font-size: 20px">Pronouns</strong>
+            <table>
+                <tbody>
+                    <tr></tr>
+                    <tr>
+                        <td>They/Them</td>
+                        <td><img src="Glyph2.png" alt="" /> Yes</td>
+                    </tr>
+                    <tr>
+                        <td>She/Her</td>
+                        <td><img src="Glyph2.png" alt="" /> Yes</td>
+                    </tr>
+                    <tr>
+                        <td>He/Him</td>
+                        <td><img src="Glyph1.png" alt="" /> Never</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <br />
 
         <strong style="font-size: 20px">Nouns</strong>
@@ -119,47 +116,48 @@
                 <tr></tr>
                 <tr>
                     <td>Dude (Neutral)</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
+                    <td><img src="Glyph2.png" alt="" /> Yes</td>
                 </tr>
                 <tr>
                     <td>Person</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
+                    <td><img src="Glyph2.png" alt="" /> Yes</td>
                 </tr>
                 <tr>
                     <td>Girl</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
+                    <td><img src="Glyph2.png" alt="" /> Yes</td>
                 </tr>
                 <tr>
                     <td>Sis</td>
-                    <td><img src="Glyph3.png" alt=""> As a Joke</td>
+                    <td><img src="Glyph3.png" alt="" /> As a Joke</td>
                 </tr>
             </tbody>
         </table>
 
         <br />
-
-        <strong style="font-size: 20px">Nouns</strong>
-        <table>
-            <tbody>
-                <tr></tr>
-                <tr>
-                    <td>Gamer</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
-                </tr>
-                <tr>
-                    <td>Pretty</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
-                </tr>
-                <tr>
-                    <td>Hot</td>
-                    <td><img src="Glyph3.png" alt=""> As A Joke</td>
-                </tr>
-                <tr>
-                    <td>Cute</td>
-                    <td><img src="Glyph4.png" alt=""> If We're Close</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="sidebox">
+            <strong style="font-size: 20px">More Nouns</strong>
+            <table>
+                <tbody>
+                    <tr></tr>
+                    <tr>
+                        <td>Gamer</td>
+                        <td><img src="Glyph2.png" alt="" /> Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Pretty</td>
+                        <td><img src="Glyph2.png" alt="" /> Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Hot</td>
+                        <td><img src="Glyph3.png" alt="" /> As A Joke</td>
+                    </tr>
+                    <tr>
+                        <td>Cute</td>
+                        <td><img src="Glyph4.png" alt="" /> If We're Close</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <br />
 
@@ -169,24 +167,28 @@
                 <tr></tr>
                 <tr>
                     <td>Ms.</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
+                    <td><img src="Glyph2.png" alt="" /> Yes</td>
                 </tr>
                 <tr>
                     <td>Mx.</td>
-                    <td><img src="Glyph2.png" alt=""> Yes</td>
+                    <td><img src="Glyph2.png" alt="" /> Yes</td>
                 </tr>
             </tbody>
         </table>
 
         <br />
 
-        <strong style="font-size: 20px">Flags</strong>
-        <div class="image-grid">
-            <a href="https://lgbtqia.fandom.com/wiki/Bisexual" target="_blank"><img src="Bi.png" alt="" /></a>
-            <a href="https://lgbtqia.fandom.com/wiki/Transgender" target="_blank"><img src="Trans.png" alt="" /></a>
-            <a href="https://lgbtqia.fandom.com/wiki/Genderfluid" target="_blank"><img src="Fluid.png" alt="" /></a>
-            <a href="https://lgbtqia.fandom.com/wiki/Demiromantic" target="_blank"><img src="Demi.png" alt="" /></a>
-            <a href="https://lgbtqia.fandom.com/wiki/Demiromantic" target="_blank"><img src="Abbro.png" alt="" /></a>
+        <div class="sidebox">
+            <strong style="font-size: 20px">Flags</strong>
+            <div class="image-grid">
+                <a href="https://lgbtqia.fandom.com/wiki/Bisexual" target="_blank"><img src="Bi.png" alt="" /></a>
+                <a href="https://lgbtqia.fandom.com/wiki/Transgender" target="_blank"><img src="Trans.png" alt="" /></a>
+                <a href="https://lgbtqia.fandom.com/wiki/Genderfluid" target="_blank"><img src="Fluid.png" alt="" /></a>
+                <a href="https://lgbtqia.fandom.com/wiki/Demiromantic" target="_blank"><img src="Demi.png" alt="" /></a>
+                <a href="https://lgbtqia.fandom.com/wiki/Demiromantic" target="_blank"
+                    ><img src="Abbro.png" alt=""
+                /></a>
+            </div>
         </div>
     </body>
 </html>
