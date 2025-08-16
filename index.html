@@ -1,134 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>haiii :333</title>
-<link rel="icon" href="/icon.ico">
-<style>
-    body {
-        margin: 0;
-        font-family: sans-serif;
-        background: #63636e;
-        min-height: 100vh;
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        line-height: 1.5;
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>haiii :333</title>
+        <link rel="icon" href="/icon.ico" />
+        <style>
+            body {
+                margin: 0;
+                font-family: sans-serif;
+                background: #63636e;
+                min-height: 100vh;
+                color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                line-height: 1.5;
+            }
 
-    .container {
-        display: flex;
-        background: #1f1e29;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        overflow: hidden;
-        max-width: 750px;
-        width: 90%;
-        max-height: 600px;
-        height: 60%;
-        min-height: 160px;
-    }
+            .container {
+                display: flex;
+                background: #1f1e29;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                overflow: hidden;
+                width: 750px;
+                height: 600px;
+                min-height: 160px;
+            }
 
-    /* Tabs sidebar (desktop) */
-    .tabs {
-        background: #220c38;
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        min-width: 150px;
-    }
+            /* Tabs sidebar (desktop) */
+            .tabs {
+                background: #220c38;
+                color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                width: 150px;
+            }
 
-    .tab {
-        padding: 15px;
-        cursor: pointer;
-        border-bottom: 1px solid #8142c9;
-        text-align: center;
-    }
+            .tab {
+                padding: 15px;
+                cursor: pointer;
+                border-bottom: 1px solid #8142c9;
+                text-align: center;
+            }
 
-    .tab:hover {
-        background: #ba7af9;
-    }
+            .tab:hover {
+                background: #ba7af9;
+            }
 
-    .tab.active {
-        background: #ba7af9;
-    }
+            .tab.active {
+                background: #ba7af9;
+            }
 
+            /* Content area */
+            .content {
+                flex: 1;
+                overflow-y: auto;
+            }
 
-    /* Content area */
-    .content {
-        flex: 1;
-        overflow-y: auto;
-    }
+            /* Link styling */
+            a {
+                color: white;
+                text-decoration: none;
+                outline: none;
+            }
+            a:visited {
+                color: white;
+            }
+            a:hover,
+            a:active,
+            a:focus {
+                color: white;
+                outline: none;
+            }
 
-    /* Link styling */
-    a {
-        color: white;
-        text-decoration: none;
-        outline: none;
-    }
-    a:visited {
-        color: white;
-    }
-    a:hover,
-    a:active,
-    a:focus {
-        color: white;
-        outline: none;
-    }
+            /* Mobile layout: tabs on top */
+            @media (max-width: 750px) {
+                body {
+                    align-items: stretch;
+                    height: auto;
+                }
+                .container {
+                    flex-direction: column;
+                    height: auto;
+                    border-radius: 0;
+                    max-width: 100%;
+                    width: 100%;
+                    box-shadow: none;
+                    max-height: 100%;
+                }
+                .tabs {
+                    flex-direction: row;
+                    min-width: 0;
+                    width: 100%;
+                }
+                .tab {
+                    flex: 1;
+                    border-bottom: none;
+                    border-right: 1px solid #8142c9;
+                }
+                .tab:last-child {
+                    border-right: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="tabs">
+                <div class="tab" onclick="loadPage('intro.html', this)">Intro</div>
+                <div class="tab" onclick="loadPage('interests.html', this)">Interests</div>
+                <div class="tab" onclick="loadPage('identity.html', this)">Identity</div>
+                <div class="tab" onclick="loadPage('links.html', this)">Links</div>
+            </div>
+            <iframe title="hi :3" class="content" id="contentFrame" src="intro.html" style="border: none"></iframe>
+        </div>
 
-    /* Mobile layout: tabs on top */
-    @media (max-width: 768px) {
-        body {
-            align-items: stretch;
-            height: auto;
-        }
-        .container {
-            flex-direction: column;
-            height: auto;
-            border-radius: 0;
-            max-width: 100%;
-            width: 100%;
-            box-shadow: none;
-            max-height: 100%;
-        }
-        .tabs {
-            flex-direction: row;
-            min-width: 0;
-        }
-        .tab {
-            flex: 1;
-            border-bottom: none;
-            border-right: 1px solid #8142c9;
-        }
-        .tab:last-child {
-            border-right: none;
-        }
-    }
-</style>
-</head>
-<body>
+        <script>
+            function loadPage(file, tabElement) {
+                // Update iframe
+                document.getElementById("contentFrame").src = file;
 
-<div class="container">
-    <div class="tabs">
-        <div class="tab active" onclick="loadPage('intro.html', this)">Intro</div>
-        <div class="tab" onclick="loadPage('interests.html', this)">Interests</div>
-        <div class="tab" onclick="loadPage('identity.html', this)">Identity</div>
-        <div class="tab" onclick="loadPage('links.html', this)">Links</div>
-    </div>
-    <iframe title="hi :3" class="content" id="contentFrame" src="intro.html" style="border:none;"></iframe>
+                // Update tab classes
+                document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
+                tabElement.classList.add("active");
 
-</div>
+                // Save current tab to localStorage
+                localStorage.setItem("selectedTab", file);
+            }
 
-<script>
-    function loadPage(file, tabElement) {
-        document.getElementById('contentFrame').src = file;
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        tabElement.classList.add('active');
-    }
-</script>
+            // On page load, restore last tab
+            window.addEventListener("DOMContentLoaded", () => {
+                const lastTab = localStorage.getItem("selectedTab") || "intro.html";
+                const tabs = document.querySelectorAll(".tab");
 
-</body>
+                tabs.forEach((tab) => {
+                    const file = tab.textContent.trim().toLowerCase() + ".html";
+                    if (file === lastTab) {
+                        tab.classList.add("active");
+                        document.getElementById("contentFrame").src = lastTab;
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
