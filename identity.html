@@ -4,13 +4,23 @@
         <title>why are you here? :33</title>
         <meta charset="UTF-8" />
         <style>
+            @font-face {
+                font-family: "PixelFont";
+                src: url("Tiny5-Regular.woff") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
             a {
                 color: white;
                 text-decoration: none;
                 outline: none;
             }
             body {
-                font-family: sans-serif;
+                font-family: "Pixelfont", monospace;
+                -webkit-font-smoothing: none;
+                -moz-osx-font-smoothing: grayscale;
+                font-smooth: never;
+                text-rendering: optimizeSpeed;
                 background: #1f1e29;
                 color: #ffffff;
                 text-align: center;
@@ -30,9 +40,27 @@
                 margin-right: auto;
             }
             td {
-                border: 1px solid;
-                padding: 5px;
+                border: 2px solid;
+                padding: 4px;
                 width: 150px;
+            }
+            .image-grid-container {
+                display: flex;
+                justify-content: center;
+            }
+            .image-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+                justify-content: center;
+            }
+            .image-grid a {
+                display: block;
+            }
+            .image-grid img {
+                width: 168px;
+                height: auto;
+                display: block;
             }
         </style>
     </head>
@@ -45,7 +73,7 @@
             since my fluidity would ofc never go with my birth gender.
         </p>
 
-        <strong>Names</strong>
+        <strong style="font-size: 20px">Names</strong>
         <table>
             <tbody>
                 <tr></tr>
@@ -62,7 +90,7 @@
 
         <br />
 
-        <strong>Pronouns</strong>
+        <strong style="font-size: 20px">Pronouns</strong>
         <table>
             <tbody>
                 <tr></tr>
@@ -83,7 +111,7 @@
 
         <br />
 
-        <strong>Nouns</strong>
+        <strong style="font-size: 20px">Nouns</strong>
         <table>
             <tbody>
                 <tr></tr>
@@ -108,7 +136,7 @@
 
         <br />
 
-        <strong>Nouns</strong>
+        <strong style="font-size: 20px">Nouns</strong>
         <table>
             <tbody>
                 <tr></tr>
@@ -133,7 +161,7 @@
 
         <br />
 
-        <strong>Honorifics</strong>
+        <strong style="font-size: 20px">Honorifics</strong>
         <table>
             <tbody>
                 <tr></tr>
@@ -149,5 +177,14 @@
         </table>
 
         <br />
+
+        <strong style="font-size: 20px">Flags</strong>
+        <div class="image-grid">
+            <a href="https://lgbtqia.fandom.com/wiki/Bisexual" target="_blank"><img src="Bi.png" alt="" /></a>
+            <a href="https://lgbtqia.fandom.com/wiki/Transgender" target="_blank"><img src="Trans.png" alt="" /></a>
+            <a href="https://lgbtqia.fandom.com/wiki/Genderfluid" target="_blank"><img src="Fluid.png" alt="" /></a>
+            <a href="https://lgbtqia.fandom.com/wiki/Demiromantic" target="_blank"><img src="Demi.png" alt="" /></a>
+            <a href="https://lgbtqia.fandom.com/wiki/Demiromantic" target="_blank"><img src="Abbro.png" alt="" /></a>
+        </div>
     </body>
 </html>
