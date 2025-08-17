@@ -26,11 +26,9 @@
                 text-decoration: none;
                 outline: none;
             }
-
             a:visited {
                 color: white;
             }
-
             a:hover,
             a:active,
             a:focus {
@@ -55,7 +53,6 @@
     </head>
     <body>
         <h2>Intro</h2>
-
         <div class="sidebox">
             <div style="text-align: center">
                 <ul>
@@ -71,7 +68,6 @@
             </div>
         </div>
         <br />
-
         <p>
             Halloooo! I am Nuva, and welcome to my little corner of the internet. I am a <span id="yearsPassed2"></span>
             year old creature with an interest in programming and game development. I enjoy completing hard challenges
@@ -88,20 +84,16 @@
             something like Github or Neocities to host the site for free. The only way you would have to pay is if you
             want a custom domain like nuva.gay.
         </p>
-
         <br />
         <script>
             function yearsSince(dateString, timeZoneOffset) {
                 const baseDate = new Date(dateString);
                 baseDate.setHours(baseDate.getHours() - timeZoneOffset);
-
                 const now = new Date();
                 const diff = now - baseDate;
-
                 const years = diff / (1000 * 60 * 60 * 24 * 365.2425);
                 return Math.floor(years);
             }
-
             const yearsPassed = yearsSince("2005-12-21T00:00:00", -5);
             document.getElementById("yearsPassed").textContent = yearsPassed;
             document.getElementById("yearsPassed2").textContent = yearsPassed;

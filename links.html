@@ -26,11 +26,9 @@
                 text-decoration: none;
                 outline: none;
             }
-
             a:visited {
                 color: white;
             }
-
             a:hover,
             a:active,
             a:focus {
@@ -61,7 +59,6 @@
                 width: 250px;
                 height: 168px;
             }
-
             .tile-media::before {
                 content: "";
                 position: absolute;
@@ -70,7 +67,6 @@
                 width: 100%;
                 height: 100%;
             }
-
             .tile-media .overlay {
                 position: absolute;
                 top: 25%;
@@ -81,40 +77,24 @@
                 margin: 0; /* remove default margins */
             }
             .discord-splatter {
-                width: 250;
+                width: 250px;
                 height: 168px;
-                background-color: #5865f2;
-                -webkit-mask: url("Splatter.png") no-repeat center;
-                -webkit-mask-size: contain;
-                mask: url("Splatter.png") no-repeat center;
-                mask-size: contain;
+                background-color: #5865f2; /* solid color */
             }
             .tumblr-splatter {
-                width: 250;
+                width: 250px;
                 height: 168px;
                 background-color: #36465d;
-                -webkit-mask: url("Splatter.png") no-repeat center;
-                -webkit-mask-size: contain;
-                mask: url("Splatter.png") no-repeat center;
-                mask-size: contain;
             }
             .youtube-splatter {
-                width: 250;
+                width: 250px;
                 height: 168px;
                 background-color: #ff0033;
-                -webkit-mask: url("Splatter.png") no-repeat center;
-                -webkit-mask-size: contain;
-                mask: url("Splatter.png") no-repeat center;
-                mask-size: contain;
             }
             .steam-splatter {
-                width: 250;
+                width: 250px;
                 height: 168px;
                 background-color: #2a475e;
-                -webkit-mask: url("Splatter.png") no-repeat center;
-                -webkit-mask-size: contain;
-                mask: url("Splatter.png") no-repeat center;
-                mask-size: contain;
             }
         </style>
     </head>
@@ -123,25 +103,22 @@
         <div class="tile-grid">
             <a href="https://discordapp.com/users/410550923086266370" target="_blank" class="tile">
                 <div class="tile-media discord-splatter">
-                    <img src="Discord.svg" class="overlay" alt=""/>
+                    <img src="Discord.svg" class="overlay" alt="" />
                 </div>
                 <p><b style="font-size: 20px">Discord</b></p>
             </a>
-
             <a href="https://www.tumblr.com/blog/nuvaa" target="_blank" class="tile">
                 <div class="tile-media tumblr-splatter">
                     <img src="Tumblr.svg" class="overlay" alt="" />
                 </div>
                 <p><b style="font-size: 20px">Tumblr</b></p>
             </a>
-
             <a href="https://www.youtube.com/@nuva9547" target="_blank" class="tile">
                 <div class="tile-media youtube-splatter">
                     <img src="Youtube.svg" class="overlay" alt="" />
                 </div>
                 <p><b style="font-size: 20px">Youtube</b></p>
             </a>
-
             <a href="https://steamcommunity.com/id/Nuwuva/" target="_blank" class="tile">
                 <div class="tile-media steam-splatter">
                     <img src="Steam.svg" class="overlay" alt="" />
