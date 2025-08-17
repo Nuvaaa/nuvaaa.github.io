@@ -4,10 +4,27 @@
         <title>why are you here? :33</title>
         <meta charset="UTF-8" />
         <style>
+            @font-face {
+                font-family: "PixelFont";
+                src: url("Tiny5-Regular.woff") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                font-family: "Pixelfont", monospace;
+                -webkit-font-smoothing: none;
+                -moz-osx-font-smoothing: grayscale;
+                font-smooth: never;
+                text-rendering: optimizeSpeed;
+                background: #1f1e29;
+                color: #ffffff;
+                text-align: center;
+                line-height: 1.5;
+            }
             a {
-            color: white;
-            text-decoration: none;
-            outline: none;
+                color: white;
+                text-decoration: none;
+                outline: none;
             }
 
             a:visited {
@@ -20,34 +37,117 @@
                 color: white;
                 outline: none;
             }
-            body {
-                margin: 0;
-                font-family: sans-serif;
-                background: #1f1e29;
-                color: #ffffff;
+            .tile-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, 250px); /* fixed width tiles */
+                gap: 16px;
+                justify-content: center; /* centers the grid when there's extra space */
+                padding: 20px;
+                padding-top: 0;
+            }
+            .tile {
+                background: #323142;
+                color: #fff;
+                border-radius: 8px;
+                overflow: hidden;
                 text-align: center;
-                line-height: 1.5;
+                width: 100%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+            }
+            .tile-media {
+                position: relative; /* allows overlay positioning */
+                width: 250px;
+                height: 168px;
+            }
+
+            .tile-media::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .tile-media .overlay {
+                position: absolute;
+                top: 25%;
+                left: 25%;
+                width: 50%;
+                height: 50%;
+                object-fit: contain; /* keeps the image proportions */
+                margin: 0; /* remove default margins */
+            }
+            .discord-splatter {
+                width: 250;
+                height: 168px;
+                background-color: #5865f2;
+                -webkit-mask: url("Splatter.png") no-repeat center;
+                -webkit-mask-size: contain;
+                mask: url("Splatter.png") no-repeat center;
+                mask-size: contain;
+            }
+            .tumblr-splatter {
+                width: 250;
+                height: 168px;
+                background-color: #36465d;
+                -webkit-mask: url("Splatter.png") no-repeat center;
+                -webkit-mask-size: contain;
+                mask: url("Splatter.png") no-repeat center;
+                mask-size: contain;
+            }
+            .youtube-splatter {
+                width: 250;
+                height: 168px;
+                background-color: #ff0033;
+                -webkit-mask: url("Splatter.png") no-repeat center;
+                -webkit-mask-size: contain;
+                mask: url("Splatter.png") no-repeat center;
+                mask-size: contain;
+            }
+            .steam-splatter {
+                width: 250;
+                height: 168px;
+                background-color: #2a475e;
+                -webkit-mask: url("Splatter.png") no-repeat center;
+                -webkit-mask-size: contain;
+                mask: url("Splatter.png") no-repeat center;
+                mask-size: contain;
             }
         </style>
     </head>
     <body>
         <h2>Links</h2>
-        <h4>
-            <a href="https://www.tumblr.com/blog/nuvaa">
-                <img id="tumblrIcon" alt="tumblr" src="tumblr.svg" height="13" width="13"/> Tumblr
-            </a><br>
-
-            <a href="https://www.youtube.com/@nuva9547">
-                <img id="youtubeIcon" alt="youtube" src="youtube.svg" height="13" width="13"/> Youtube
-            </a><br>
-
-            <a href="https://discordapp.com/users/410550923086266370">
-                <img id="discordIcon" alt="discord" src="discord.svg" height="13" width="13"/> Discord
-            </a><br>
-
-            <a href="https://steamcommunity.com/id/Nuwuva/">
-                <img id="steamIcon" alt="steam" src="steam.svg" height="13" width="13"/> Steam
+        <div class="tile-grid">
+            <a href="https://discordapp.com/users/410550923086266370" class="tile">
+                <div class="tile-media discord-splatter">
+                    <img src="Discord.svg" class="overlay" alt=""/>
+                </div>
+                <p><b style="font-size: 20px">Discord</b></p>
             </a>
-        </h4>
+
+            <a href="https://www.tumblr.com/blog/nuvaa" class="tile">
+                <div class="tile-media tumblr-splatter">
+                    <img src="Tumblr.svg" class="overlay" alt="" />
+                </div>
+                <p><b style="font-size: 20px">Tumblr</b></p>
+            </a>
+
+            <a href="https://www.youtube.com/@nuva9547" class="tile">
+                <div class="tile-media youtube-splatter">
+                    <img src="Youtube.svg" class="overlay" alt="" />
+                </div>
+                <p><b style="font-size: 20px">Youtube</b></p>
+            </a>
+
+            <a href="https://steamcommunity.com/id/Nuwuva/" class="tile">
+                <div class="tile-media steam-splatter">
+                    <img src="Steam.svg" class="overlay" alt="" />
+                </div>
+                <p><b style="font-size: 20px">Steam</b></p>
+            </a>
+        </div>
     </body>
 </html>

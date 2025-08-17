@@ -4,10 +4,27 @@
         <title>why are you here? :33</title>
         <meta charset="UTF-8" />
         <style>
+            @font-face {
+                font-family: "PixelFont";
+                src: url("Tiny5-Regular.woff") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                font-family: "Pixelfont", monospace;
+                -webkit-font-smoothing: none;
+                -moz-osx-font-smoothing: grayscale;
+                font-smooth: never;
+                text-rendering: optimizeSpeed;
+                background: #1f1e29;
+                color: #ffffff;
+                text-align: center;
+                line-height: 1.5;
+            }
             a {
-            color: white;
-            text-decoration: none;
-            outline: none;
+                color: white;
+                text-decoration: none;
+                outline: none;
             }
 
             a:visited {
@@ -20,27 +37,74 @@
                 color: white;
                 outline: none;
             }
-            body {
-                margin: 0;
-                font-family: sans-serif;
-                background: #1f1e29;
-                color: #ffffff;
-                text-align: center;
-                line-height: 1.5;
+            ul {
+                list-style-type: none;
+                line-height: 2;
+                padding: 0px;
+            }
+            .sidebox {
+                width: 100%;
+                background-color: #323142;
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+            p {
+                margin: 20px;
             }
         </style>
     </head>
     <body>
         <h2>Intro</h2>
+
+        <div class="sidebox">
+            <div style="text-align: center">
+                <ul>
+                    <li>Nuva</li>
+                    <li>They/She</li>
+                    <li><span id="yearsPassed"></span> years old</li>
+                    <li>Born December 21st</li>
+                    <li>
+                        <a href="https://www.16personalities.com/infp-personality" target="_blank">INFP-T</a>
+                    </li>
+                    <li>Likely Neurodivergent</li>
+                </ul>
+            </div>
+        </div>
+        <br />
+
         <p>
-            haiiii!! <br>
-            I'm still working on this site so a lot is missing rn. <br>
-            All the links are ready tho!【 ◕ ᴗ ◕ 】<br>
-            <br>
-            yooo I finished the identity page :333<br>
-            I really gotta make the actual formatting so this site doesn't look like shit<br>
-            <br>
-            Interests page finished! just gotta make my intro now :3
+            Halloooo! I am Nuva, and welcome to my little corner of the internet. I am a <span id="yearsPassed2"></span>
+            year old creature with an interest in programming and game development. I enjoy completing hard challenges
+            for no reason in games. You can see the stupid things I've done at the bottom of the Interests tab. I also
+            want to get back into drawing, but the fixation will not return ever since <i>the incident...</i>
         </p>
+        <p>
+            If we are meeting for the first time and I seem a little unresponsive, I'm likely just gauging how I should
+            act with you. It can take me a couple days so please be patient with me! I don't use any social media besides
+            Discord and Tumblr, but you can find both of those in the links tab if you need to message me.
+        </p>
+        <p>
+            If you want to set up your own site like this, then go for it! HTML isn't that complicated, and you can use
+            something like Github or Neocities to host the site for free. The only way you would have to pay is if you
+            want a custom domain like nuva.gay.
+        </p>
+
+        <br />
+        <script>
+            function yearsSince(dateString, timeZoneOffset) {
+                const baseDate = new Date(dateString);
+                baseDate.setHours(baseDate.getHours() - timeZoneOffset);
+
+                const now = new Date();
+                const diff = now - baseDate;
+
+                const years = diff / (1000 * 60 * 60 * 24 * 365.2425);
+                return Math.floor(years);
+            }
+
+            const yearsPassed = yearsSince("2005-12-21T00:00:00", -5);
+            document.getElementById("yearsPassed").textContent = yearsPassed;
+            document.getElementById("yearsPassed2").textContent = yearsPassed;
+        </script>
     </body>
 </html>
