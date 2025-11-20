@@ -3,15 +3,9 @@
         <title></title>
         <style>
             :root {
-                --link-color: #69DBFF;
-                --main-link-color: #005ad6;
-                --dark-link-color: #384775;
-                --visited-link-color: #62687d;
-
                 --text-color: white;
-                --highlight: #fff4e0;
                 --post-bg: #e4e4ec;
-                --bg-color: #D0D0DB;
+                --bg-color: #c0c0d5;
                 --border-color: #8E8D98;
                 --border-shadow: #8E8D9880; /*transparent*/
                 --text-bg: #6A6873;
@@ -31,11 +25,37 @@
                 font-style: normal;
                 src: url('/fonts/Nunito-Black.ttf') format('truetype');
             }
+            @font-face {
+                font-display: swap;
+                font-family: 'Ubuntu';
+                font-style: normal;
+                src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
+            }
+            @font-face {
+                font-display: swap;
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: bold;
+                src: url('/fonts/Ubuntu-Bold.ttf') format('truetype');
+            }
+            @font-face {
+                font-display: swap;
+                font-family: 'Ubuntu';
+                font-style: italic;
+                src: url('/fonts/Ubuntu-Italic.ttf') format('truetype');
+            }
+            @font-face {
+                font-display: swap;
+                font-family: 'Ubuntu';
+                font-style: italic;
+                font-weight: bold;
+                src: url('/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+            }
             body {
-                font-family: Arial, sans-serif;
+                font-family: Ubuntu, sans-serif;
                 margin: 0;
                 padding: 0;
-                background-color: #363545;
+                background-color: var(--bg-color);
                 color: #ffffff;
             }
             #container {
@@ -45,7 +65,7 @@
             }
             .flex {
                 display: flex;
-                max-width: 100%;
+                max-width: 90%;
                 margin: auto;
             }
             #sidebar {
@@ -59,6 +79,10 @@
                 padding-inline: 1em;
                 max-width: 1160px;
                 width: 1160px;
+                background-color: var(--main-color);
+                box-shadow: 2px 2px 5px var(--border-shadow);
+                border-radius: .8em;
+                margin: 1em;
             }
             #navigation {
                 position: sticky;
@@ -77,7 +101,8 @@
                 padding-top: 1em;
             }
             #navigation ul {
-                border-top: 3px solid var(--border-color)
+                border-top: 3px solid var(--border-color);
+                border-radius: 0;
             }
             .pastel-buttons {
                 display: inline-block;
@@ -128,6 +153,7 @@
             }
             .pastel-buttons a:link,
             .pastel-buttons a:visited { color: var(--text-color)}
+
         </style>
     </head>
     <body>
@@ -166,6 +192,7 @@
                     </nav>
                 </aside>
                 <main>
+
                 </main>
             </div>
         </div>
