@@ -1,0 +1,173 @@
+<html lang="en">
+    <head>
+        <title></title>
+        <style>
+            :root {
+                --link-color: #69DBFF;
+                --main-link-color: #005ad6;
+                --dark-link-color: #384775;
+                --visited-link-color: #62687d;
+
+                --text-color: white;
+                --highlight: #fff4e0;
+                --post-bg: #e4e4ec;
+                --bg-color: #D0D0DB;
+                --border-color: #8E8D98;
+                --border-shadow: #8E8D9880; /*transparent*/
+                --text-bg: #6A6873;
+                --main-color: #4D4B57;
+                --dark-color: #373540;
+                --shadow-color: #6A687380; /*transparent*/
+
+                --extra1: #9E54F4;
+                --extra2: #8C57E5;
+                --extra3: #795AD5;
+                --extra4: #675CC6;
+                --extra5: #545FB6;
+            }
+            @font-face {
+                font-display: swap;
+                font-family: 'Nunito';
+                font-style: normal;
+                src: url('/fonts/Nunito-Black.ttf') format('truetype');
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #363545;
+                color: #ffffff;
+            }
+            #container {
+                width: 1440px;
+                max-width: 100%;
+                margin: auto;
+            }
+            .flex {
+                display: flex;
+                max-width: 100%;
+                margin: auto;
+            }
+            #sidebar {
+                max-width: 235px;
+                min-width: 235px;
+                padding: 1em;
+                margin-right: 10px
+            }
+            main {
+                border-radius: 1em;
+                padding-inline: 1em;
+                max-width: 1160px;
+                width: 1160px;
+            }
+            #navigation {
+                position: sticky;
+                background-color: var(--main-color);
+                box-shadow: 2px 2px 5px var(--border-shadow);
+                border-radius: .8em;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: 'Nunito';
+                letter-spacing: 0.1em;
+                font-size: 1.5em;
+                padding-top: 0.7em;
+            }
+            #navigation li {
+                width: 100%;
+                padding-top: 1em;
+            }
+            #navigation ul {
+                border-top: 3px solid var(--border-color)
+            }
+            .pastel-buttons {
+                display: inline-block;
+                width: 100%;
+                font-weight: bold;
+                line-height: 2rem;
+                vertical-align: middle;
+                border-radius: .3em;
+                text-decoration: none;
+                padding: 0 .5em;
+                text-align: center;
+                list-style-type: "";
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                flex-direction: row;
+                font-family: "Nunito", system-ui;
+                font-size: 0.67em;
+                font-style: normal;
+                letter-spacing: 0em;
+            }
+            .pastel-buttons li a {
+                display: inline-block;
+                width: 100%;
+                height: 2rem;
+                font-weight: bold;
+                line-height: 2rem;
+                vertical-align: middle;
+                border-radius: 1em;
+                text-decoration: none;
+                padding: 0;
+            }
+            .pastel-buttons a::before,
+            .pastel-buttons a::after {
+                content: "★";
+                color: var(--text-color);
+                font-size: 1em;
+            }
+            .pastel-buttons a::before {padding-right: 0.5rem;}
+            .pastel-buttons a::after {padding-left: 0.5rem;}
+            .pastel-buttons li:nth-child(7n+1) a {background-color: var(--extra1);}
+            .pastel-buttons li:nth-child(7n+2) a {background-color: var(--extra2);}
+            .pastel-buttons li:nth-child(7n+3) a {background-color: var(--extra3);}
+            .pastel-buttons li:nth-child(7n+4) a {background-color: var(--extra4);}
+            .pastel-buttons li:nth-child(7n+5) a {background-color: var(--extra5);}
+            * {
+                box-sizing: border-box;
+                scrollbar-color: var(--border-color) var(--text-bg);
+            }
+            .pastel-buttons a:link,
+            .pastel-buttons a:visited { color: var(--text-color)}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="flex">
+                <aside id="sidebar">
+                    <nav id="navigation">
+                        Navigation
+                        <ul class="pastel-buttons">
+                            <li>
+                                <a href="/home/">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/about/">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/links/">
+                                    Links
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/showcase/">
+                                    Showcase
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/games/">
+                                    Games
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
