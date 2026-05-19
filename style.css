@@ -1,7 +1,7 @@
 /* these are the main colors and header image
    replace them with anything you want! */
 :root {
-    --header-bg: url('images/header.png');
+    --header-bg: url('images/header1.png');
     --accent-color: #d59bf6;
     --link-color: #da87e0;
     --bg-color: #e9d6f7;
@@ -38,7 +38,7 @@ header {
 /* you can add the image url in :root (at the top) if you want */
     background: var(--header-bg);
     background-size: 100%;
-    background-position: center;
+    background-position: top;
 /* change the minimum height if you want it to take up more/less space */
     min-height: 200px;
 /* can also limit the size of the header if you don't want to fill up the top. i recommend at least 800px tho! */
@@ -65,8 +65,15 @@ header > h1 {
 }
 
 nav {
+    background-color: var(--bg-color);
+    text-shadow: var(--bg-color2) 1px 1px 3px;
+    text-align: center;
+    font-size: small;
     padding: 1em;
-    margin: 1em;
+    margin: 1em auto;
+    max-width: 960px;
+    /*padding: 1em;*/
+    margin-top: 2em;
     font-weight: bold;
 }
 
@@ -74,6 +81,10 @@ nav > ul {
     max-width: 960px;
     margin: auto;
     line-height: 3rem;
+/* this stuff makes it wrap around on mobile */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 /* this line takes away the dot in front of the list items */
     list-style-type: none;
 /* list items have default padding but we don't need it for these */
@@ -90,24 +101,13 @@ nav li > a {
     padding: .5em 3em;
 /* this takes away the link underline */
     text-decoration: none;
+    border: 2px solid var(--text-color);
+}
+nav li > a:visited {
+    color: var(--text-color);
 }
 nav li > a:hover {
     box-shadow: var(--text-color) 4px 4px;
-}
-
-a {
-    color: var(--link-color);
-    border-radius: .3em;
-    text-shadow: var(--bg-color) 1px 1px 2px;
-    font-weight: bold;
-    transition: background-color 400ms ease-out;
-}
-a:visited {
-    color: var(--text-color);
-}
-a:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color);
 }
 
 /* you can change this to anything you want :) */
@@ -121,6 +121,7 @@ ul { list-style-type: "★ "; }
     padding: 1em;
     border: 2px solid var(--text-color);
     box-shadow: var(--accent-color) 4px 4px;
+    max-width: 20%;
 }
 
 #avatar {
@@ -153,7 +154,20 @@ ul { list-style-type: "★ "; }
     margin: auto;
 }
 
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 main {
+    flex-grow: 1;
     background-color: var(--favorite-color);
     padding: 1em 2em;
     margin: 1em;
