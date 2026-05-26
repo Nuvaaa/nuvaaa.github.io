@@ -113,6 +113,8 @@ nav li > a:hover {
 /* you can change this to anything you want :) */
 ul { list-style-type: "★ "; }
 
+.dictonary { list-style-type: "# "; }
+
 #sidebar {
     background: var(--bg-color);
     background-size: 65.05px 65.05px;
@@ -156,6 +158,10 @@ ul { list-style-type: "★ "; }
 .column {
   float: left;
   width: 50%;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* Clear floats after the columns */
