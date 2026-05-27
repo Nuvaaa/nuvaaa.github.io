@@ -181,9 +181,9 @@ main {
     text-shadow: var(--bg-color2) 1px 1px 3px;
 }
 
-main > h1,
-main > h2,
-main > h3 {
+h1,
+h2,
+h3 {
     background-color: var(--bg-color);
     border-radius: .4em;
     padding: .2em .5em;
